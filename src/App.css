@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.table {
+  border: solid;
+  border-radius: 20px;
+  padding: 2%;
+  margin-top: 2%;
+background: linear-gradient(90deg, rgba(210, 210, 210, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
