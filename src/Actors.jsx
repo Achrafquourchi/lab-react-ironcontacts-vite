@@ -1,15 +1,14 @@
 import {useState} from 'react'
-import "./App.css";
+import "./Actors.css";
 import Contacts from './contacts.json'
 
 
 
-function App() {
+function Actors() {
 
   const contactList = Contacts.slice(0,5)
   const remainingContacts = Contacts.slice(5)
-  // console.log(remainingContacts)
-  // console.log(contactList)
+
 
   const [contacts, setContacts] = useState(contactList)
 
@@ -20,7 +19,6 @@ function App() {
     console.log(randomContact)
     copyContacts.push(randomContact[0])
     setContacts(copyContacts)
-    // console.log(copyContacts)    
   }
 
 
@@ -75,4 +73,4 @@ function App() {
   );
 }
 
-export default App;
+export default Actors;
