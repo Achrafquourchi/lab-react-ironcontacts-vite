@@ -6,11 +6,11 @@ import Contacts from './contacts.json'
 
 function Actors() {
 
-  const contactList = Contacts.slice(0,5)
+  const ActorList = Contacts.slice(0,5)
   const remainingContacts = Contacts.slice(5)
 
 
-  const [contacts, setContacts] = useState(contactList)
+  const [contacts, setActors] = useState(ActorList)
 
   function getRandomContact(){
     const copyContacts = [...contacts]
@@ -18,25 +18,25 @@ function Actors() {
     const randomContact = remainingContacts.splice(randomNum, 1)
     console.log(randomContact)
     copyContacts.push(randomContact[0])
-    setContacts(copyContacts)
+    setActors(copyContacts)
   }
 
 
   function sortByPopularity(){
     const copyContacts = [...contacts]
     copyContacts.sort((a,b)=>b.popularity-a.popularity)
-    setContacts(copyContacts)
+    setActors(copyContacts)
   }
 
   function sortByName(){
     const copyContacts = [...contacts]
     copyContacts.sort((a,b) => a.name.localeCompare(b.name))
-    setContacts(copyContacts)
+    setActors(copyContacts)
   }
 
   function deleteContact(id){
     const copyContacts = contacts.filter((oneContact)=>{return oneContact.id !== id})
-    setContacts(copyContacts)
+    setActors(copyContacts)
   }
   
   return (
